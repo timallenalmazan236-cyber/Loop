@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Roller</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="controls">
+      <select id="diceCount" aria-label="Number of dice">
+        <option value="1">1 Die</option>
+        <option value="2" selected>2 Dice</option>
+        <option value="3">3 Dice</option>
+        <option value="4">4 Dice</option>
+        <option value="5">5 Dice</option>
+        <option value="6">6 Dice</option>
+      </select>
+
+      <input
+        type="color"
+        id="diceColor"
+        value="#59cbb5"
+        aria-label="Dice color"
+        title="Choose dice color"
+      >
+
+      <button id="resetBtn" aria-label="Reset dice" title="Reset dice">
+        <svg viewBox="0 0 24 24" width="19" height="19"
+             fill="none" stroke="currentColor" stroke-width="1.8"
+             stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true">
+          <path d="M3 12a9 9 0 1 0 3-6.7L3 8"/>
+          <path d="M3 3v5h5"/>
+        </svg>
+      </button>
+
+      <button id="copyBtn" aria-label="Copy results" title="Copy results">
+        <svg viewBox="0 0 24 24" width="19" height="19"
+             fill="none" stroke="currentColor" stroke-width="1.8"
+             stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true">
+          <rect x="8" y="8" width="12" height="12" rx="2"/>
+          <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/>
+        </svg>
+      </button>
+    </section>
+
+    <section class="preview" id="preview">
+      <div class="dice-container" id="diceContainer"></div>
+
+      <div class="total" id="total"></div>
+
+      <button
+        id="rollBtn"
+        class="roll-bottom"
+        aria-label="Roll dice"
+        title="Roll dice"
+      >
+        <svg viewBox="0 0 24 24" width="22" height="22"
+             fill="none" stroke="currentColor" stroke-width="1.8"
+             stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="4"/>
+          <circle cx="8" cy="8" r="1" fill="currentColor"/>
+          <circle cx="16" cy="8" r="1" fill="currentColor"/>
+          <circle cx="12" cy="12" r="1" fill="currentColor"/>
+          <circle cx="8" cy="16" r="1" fill="currentColor"/>
+          <circle cx="16" cy="16" r="1" fill="currentColor"/>
+        </svg>
+      </button>
+    </section>
+
+    <div id="copyMessage" class="copy-message">Copied</div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
